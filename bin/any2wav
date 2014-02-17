@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'any2wav'
+
+src_file_name = ARGV[0]
+dst_file_name = ARGV[1]
+convertor = Any2wav::FileConvertor.new
+convertor.convert(src_file_name, dst_file_name)
