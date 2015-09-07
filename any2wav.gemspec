@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Any2wav::VERSION
   spec.authors       = ["Naoki Nomoto"]
   spec.email         = ["happygrind@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{wav converter from any file.}
+  spec.homepage      = "https://github.com/naokinomoto/any2wav"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

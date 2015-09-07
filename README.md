@@ -4,21 +4,9 @@ TODO: Write a gem description
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'any2wav'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install any2wav
-
 ## Usage
 
-TODO: Write usage instructions here
+    $ any2wav src_file dst.wav
 
 ## Contributing
 

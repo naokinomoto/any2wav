@@ -7,26 +7,21 @@ module Any2wav
 
       @samples_per_sec = 44100
       @bits_per_sample = 16
-      @block_size = @bits_per_sample / 8
-      @size = @buffer.size * @block_size
-      @bytes_per_sec = @block_size * @samples_per_sec
+      @channel = 2
+      @block_size = @channel * 2
+      @size = @buffer.size
+      @bytes_per_sec = @samples_per_sec * @block_size
 
       @chunk_size = 16
       @wave_format_type = 1
-      @channel = 2
     end
 
     def header
-      header =
-        "RIFF" +
-        [@size + 36].pack("L*") +
-        "WAVE"
-      header
+      "RIFF" + [@size + 36].pack("L*") + "WAVE" + "fmt "
     end
 
     def format_chunk
       chunk =
-        "fmt " +
         [@chunk_size].pack("L*") +
         [@wave_format_type].pack("S*") +
         [@channel].pack("S*") +
